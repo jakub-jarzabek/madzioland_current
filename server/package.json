@@ -7,7 +7,7 @@
     "start": "node index.js",
     "backend": "nodemon index.js",
     "frontend": "npm run front --prefix client",
-    "dev":"npm run backend"
+    "dev": "npm run backend"
   },
   "author": "Jakub Jarząbek",
   "license": "ISC",
