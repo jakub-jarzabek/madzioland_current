@@ -12,9 +12,9 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.post("/api/send", (req,res)=>{
+app.post("/api/send", async (req,res)=>{
    console.log(req.body)
-    sendEmail(req.body.subject,req.body.name,req.body.email,req.body.content);
+    await sendEmail(req.body.subject,req.body.name,req.body.email,req.body.content);
 })
 
 app.get('/', (req,res)=>{

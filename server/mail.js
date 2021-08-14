@@ -1,5 +1,11 @@
 const mailer = require('nodemailer');
 
+
+
+
+
+
+
 const getEmailData = (subject,name,email,content)=>{
     let data = null
     data = {
@@ -11,27 +17,43 @@ const getEmailData = (subject,name,email,content)=>{
      return data;
 }
 
-const sendEmail = (subject,name,email,content) =>{
+const sendEmail = async (subject,name,email,content) =>{
+
+    let testAccount = await mailer.createTestAccount();
 
     const smtpTransport = mailer.createTransport({
-        service: "Gmail",
-        auth:{
-            user:'appkatest69@gmail.com',
-            pass: 'qzNLgJ84zidCFuX'
+        host: "smtp.ethereal.email",
+        port: 587,
+        secure: false,
+        auth: {
+            user: testAccount.user,
+            pass: testAccount.pass,
+        },
+    });
+
+    smtpTransport.verify(function (error, success){
+        if (error){
+            console.log(error)
+        }else {
+            console.log("Server ready")
         }
     })
 
-    const mail = getEmailData(subject,name,email,content)
+
+    const mail = await getEmailData(subject,name,email,content)
 
     smtpTransport.sendMail(mail,function(error,response) {
         if(error){
             console.log(error);
         }
         else {
-        console.log ("email sent")    
+
+        console.log (`email sent from: ${mail.from} to: ${mail.to}`);
         }
-        smtpTransport.close();
+         smtpTransport.close();
     })
+
+
 }
 
 module.exports = {sendEmail}
