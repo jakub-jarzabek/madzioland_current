@@ -47,6 +47,25 @@
   }
   }
 }
+
+@media(max-width:640px) and (orientation:landscape){
+  .PhotographyHeaderWrapper{
+    width: 60%;
+    margin-left: 0;
+    position:absolute;
+    left:50%;
+    top:10%;
+    transform: translateX(-50%);
+
+  .PhotographyNav{
+    span{
+      font-size:8pt;
+      letter-spacing: 1px;
+    }
+  }
+  }
+}
+
 @media(max-width: 1024px) and (orientation: portrait){
   .PhotographyHeaderWrapper{
     width: 90%;
@@ -64,7 +83,7 @@
     }
   }
 }
-@media (max-width: 414px) and (orientation: portrait){
+@media (max-width: 415px) and (orientation: portrait){
   .PhotographyHeaderWrapper{
     .PhotographyNav{
       text-align: center;

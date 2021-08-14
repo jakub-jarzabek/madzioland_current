@@ -25,12 +25,15 @@ import DigitalArt_7_thumbnail from '../Images/DigitalArt/Digitalart_7_thumbnail.
 import DigitalArt_8 from '../Images/DigitalArt/Digitalart_8.jpg'
 import DigitalArt_8_thumbnail from '../Images/DigitalArt/Digitalart_8_thumbnail.jpg'
 
+import DigitalArt_9 from '../Images/DigitalArt/Digitalart_9.jpg'
+import DigitalArt_9_thumbnail from '../Images/DigitalArt/Digitalart_9_thumbnail.jpg'
+
 import placeholder_square from '../Images/placeholder_square.jpg'
 
 import '../Styles/LightBoxStylesOverride.scss'
 import '../Styles/GraphicDesignGallery.scss'
 const DigitalArtGallery = (props) => {
-    const {OnHover, Image1,Image2,Image3,Image4,Image5,Image6,Image7,Image8} = props.textContext.DigitalArt
+    const {OnHover, Image1,Image2,Image3,Image4,Image5,Image6,Image7,Image8,Image9} = props.textContext.DigitalArt
     return (
         <div>
             <div
@@ -84,6 +87,12 @@ const DigitalArtGallery = (props) => {
                     <div>
                         <a href={DigitalArt_8}>
                             <img src={DigitalArt_8_thumbnail} alt={Image8}/>
+                            <span>{OnHover}</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href={DigitalArt_9}>
+                            <img src={DigitalArt_9_thumbnail} alt={Image9}/>
                             <span>{OnHover}</span>
                         </a>
                     </div>

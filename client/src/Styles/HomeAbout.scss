@@ -10,7 +10,7 @@
     white-space: nowrap;
     font-family: 'Larke Neue Bold', sans-serif;
     text-align:center;
-    margin-bottom: 48px;
+    margin-bottom: 15px;
     font-size:72pt;
     color:#ffff81;
   }
@@ -44,10 +44,10 @@
 }
 @media (max-width: 1280px){
   .AboutInfo {
-    top:25%;
+    top:30%;
     h1 {
       font-size: 48pt;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
     }
     p{
       font-size:14pt;
@@ -95,6 +95,39 @@
   }
 
 }
+@media (max-width: 667px) and (orientation: portrait){
+  .AboutInfo {
+    top:42%;
+    width: 90%;
+    h1 {
+
+      font-size: 18pt;
+      margin-bottom: 5px;
+    }
+    p{
+      font-size: 10pt;
+    }
+    h2{
+      font-size:11pt ;
+
+    }
+  }
+}
+@media (max-height:640px) and (orientation: portrait){
+  .AboutInfo{
+    h1{
+      font-size:14pt;
+    }
+    p{
+      font-size:8pt;
+    }
+    h2{
+      font-size: 8pt;
+    }
+  }
+}
+
+
 @media (max-width: 992px) and (orientation: landscape){
   .AboutInfo {
     width: 90%;
@@ -111,24 +144,6 @@
       font-size:11pt ;
       white-space: nowrap;
       margin-top:0;
-    }
-  }
-}
-@media (max-width: 667px) and (orientation: portrait){
-  .AboutInfo {
-    top:42%;
-    width: 90%;
-    h1 {
-
-      font-size: 18pt;
-      margin-bottom: 5px;
-    }
-    p{
-      font-size: 10pt;
-    }
-    h2{
-      font-size:11pt ;
-
     }
   }
 }

@@ -9,3 +9,10 @@
   scroll-snap-type: y mandatory;
   overflow-x: hidden;
 }
+.PortfolioWrapper{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.PortfolioWrapper::-webkit-scrollbar{
+  display: none;
+}

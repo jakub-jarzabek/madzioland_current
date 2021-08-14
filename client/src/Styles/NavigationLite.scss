@@ -94,3 +94,14 @@
     }
   }
 }
+@media (max-height:600px) and (orientation:portrait){
+  .NavigationLite {
+    margin-top: 0;
+    .LangNav{
+      margin-top: 5px;
+    }
+    .GoBack{
+      margin-top: 0px;
+    }
+  }
+}

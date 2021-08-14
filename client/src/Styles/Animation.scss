@@ -261,6 +261,9 @@
 }
 @media (max-width: 740px) and (orientation: landscape){
   .Animation{
+    .Legal{
+      font-size: 6px;
+    }
     .BottomLeft{
       span{
         font-size: 8pt;
@@ -274,7 +277,7 @@
       }
     }
   }}
-@media (max-width:834px) and (orientation: portrait){
+@media (max-width:1024px) and (orientation: portrait){
   .Animation{
     margin:0;
     padding:0;

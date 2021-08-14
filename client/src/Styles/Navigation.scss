@@ -8,7 +8,7 @@
   justify-content: space-between;
   align-items:center;
   position: absolute;
-  z-index: 6;
+  z-index: 1000000;
   top:0;
   .Socials{
     height: 40px;
@@ -80,6 +80,7 @@ li{
 }
 .PortfolioSubMenu{
   position:absolute;
+  z-index: 10000;
   display:flex;
   flex-direction: column;
   font-size: 80%;
@@ -88,6 +89,9 @@ li{
     letter-spacing:3px;
   }
 }
+
+
+// Portrait
 @media (max-width: 1194px) and (orientation: portrait){
   .Navigation {
     background: transparent;
@@ -108,8 +112,17 @@ li{
       flex-direction: column;
     }
     .LangNav{
-      .Socials{
-        display: none;
+      li:nth-child(1){
+        position: absolute;
+        top:5%;
+        left: 85%;
+        transform: translateX(-50%);
+      }
+      li:nth-child(2){
+        position: absolute;
+        top:5%;
+        left: 95%;
+        transform: translateX(-50%);
       }
       li:nth-child(3){
         position: absolute;
@@ -120,12 +133,11 @@ li{
       li:nth-child(4){
         position: absolute;
         top:5%;
-        left: 95%;
+        left: 15%;
         transform: translateX(-50%);
       }
     }
-  }
-}
+  }}
 @media (max-width: 854px) and (orientation: portrait){
   .Navigation {
     background: transparent;
@@ -133,19 +145,61 @@ li{
     ul{
       margin-top:15px;
     }
+   
+  }}
+@media (max-width: 668px) and (orientation: portrait){
+  .Navigation{
+      padding-top:30px
+    }
+      .Navigation .MainNav li {
+        padding:5px 0;
+      }}
+@media (max-width:415px) and (orientation: portrait){
+  .Navigation{
     .LangNav{
-      li:first-child{
-        left: 10%;
+      li:nth-child(1){
+        position: absolute;
+        top:5%;
+        left:78%;
         transform: translateX(-50%);
       }
       li:nth-child(2){
-        left: 90%;
+        position: absolute;
+        top:5%;
+        left:93%;
+      
         transform: translateX(-50%);
       }
+      li:nth-child(3){
+        left:7%;
+      }
+      li:nth-child(4){
+        left: 22%;
+      }
     }
+  }
+}
+
+
+//Landscape
+@media(max-width: 1024px) and(orientation:landscape){
+  .Navigation{
+    font-size: 16px;
+    li{
+      padding: 10px;
+      span{
+        font-size:16px;
+      }
+    }
+  .Socials {
+    img{
+      height: 30px;
+    }  
+  }
   }}
 @media (max-width: 992px) and (orientation: landscape){
   .Navigation {
+    font-size:12px;
     background: transparent;
     padding-top:0;
     ul{
@@ -160,18 +214,25 @@ li{
       li{
         white-space: nowrap;
         span{
-          font-size: 14px;
+          font-size: 12px;
         }
       }
     }
     .LangNav{
   span{
-    font-size:14px;
+    font-size:12px;
   }
+    }
+    .Socials {
+      img{
+        height: 25px;
+        margin-top: 5px;
+      }  
     }
   }}
 @media (max-width: 668px) and (orientation: landscape){
   .Navigation {
+    font-size:10px;
     a.active{
       width: 20%;
       img{
@@ -179,25 +240,43 @@ li{
       }}
     .MainNav{
       li{
-        padding: 10px 10px;
+        padding: 5px 5px;
         white-space: nowrap;
         span{
-          font-size: 12px;
+          font-size: 10px;
         }
       }
     }
     .LangNav{
       span{
-        font-size:12px;
+        font-size:10px;
       }
     }
-  }
-}
-@media (max-width: 668px) and (orientation: portrait){
-.Navigation{
-  padding-top:30px
-}
-  .Navigation .MainNav li {
-    padding:5px 0;
-  }
-}
+  }}
+@media (max-width: 568px) and (orientation: landscape){
+    .Navigation {
+      li{
+        padding: 5px;
+      }
+      font-size:10px;
+      a.active{
+        width: 20%;
+        img{
+          width: 100%;
+        }}
+      .MainNav{
+        li{
+          padding: 5px 5px;
+          white-space: nowrap;
+          span{
+            font-size: 10px;
+          }
+        }
+      }
+      .LangNav{
+        margin-right: 0;
+        span{
+          font-size:10px;
+        }
+      }
+    }}

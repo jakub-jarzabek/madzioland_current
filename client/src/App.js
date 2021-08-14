@@ -12,23 +12,23 @@ import english from './LanguageFiles/English.json'
 function App() {
   const location = useLocation()
     // true == polish
-    const [language, setLanguage] =useState(true)
+    const [language, setLanguage] =useState()
     const [translation, setTranslation]= useState(polish)
     useEffect(()=>{
-        if(language){
-            setTranslation(polish)
-        }
-        else{
-            setTranslation(english)
-        }
-
+      if(localStorage.getItem('lang')==='ENG'){
+        setTranslation(english)
+      }else{
+        setTranslation(polish)
+      }
     },[language])
 
     const handleEngOnClick= ()=>{
+      localStorage.setItem('lang', 'ENG');
       setLanguage(false)
       }
     const handlePlOnClick= ()=>{
-  setLanguage(true)
+      localStorage.setItem('lang', 'PL');
+    setLanguage(true)
   }
   return (
 
