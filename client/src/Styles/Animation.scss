@@ -1,0 +1,360 @@
+.Animation{
+  height: 100vh;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  margin:0;
+  padding:0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1c1c1c;
+  box-sizing: border-box;
+  position: relative;
+  .Legal{
+    font-size: 8px;
+    position: absolute;
+    color: white;
+    bottom: 0%;
+    right: 1%;
+    z-index: 1000;
+    a{
+      color:white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+  
+.OuterTypo{
+  position: absolute;
+  left:50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 0, 40% 0, 60% 100%, 0% 100%);
+  transition:1.5s;
+  cursor: pointer;
+  .TypoMovie{
+    display: none;
+    position: absolute;
+    width:70vw;
+    height: calc(70vw/1.77);
+    left:50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    transition:1.5s;
+  }
+
+  .TypoBg{
+    background-size: cover;
+    width:100vw;
+    height: 100vh;
+  }
+.TypoMain{
+  position: absolute;
+  width:70%;
+  height:auto;
+  left:50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.TypoHeader{
+  position: absolute;
+  width: 25%;
+  left: 27%;
+  top: 85.75%;
+  transform: translateX(-50%) translateY(-50%);
+  transition:1.5s;
+}
+}
+  .border{
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(39.5% 0, 40% 0, 60% 100%, 59.5% 100%);
+    background-color:#FFFF81;
+    z-index: 10;
+    transition:1.5s;
+}
+  .BorderActiveTypo{
+    z-index: 10;
+    clip-path: polygon(90% 0, 90.5% 0, 120% 100%, 119.5% 100%);
+  }
+  .OuterComicsNonActive{
+    pointer-events: none;
+  }
+  .OuterComics {
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(100% 0, 40% 0, 60% 100%, 100% 100%);
+    transition:1.5s;
+    cursor: pointer;
+    .ComicsMovie{
+      display: none;
+      position: absolute;
+      width:70%;
+      height: calc(70vw/1.77);
+      left:50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      transition:1.5s
+    }
+    .ComicsBg{
+      background-size: cover;
+      width:100vw;
+      height: 100vh;
+    }
+    .ComicsMain{
+      position: absolute;
+      width:70%;
+      left:50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+    .ComicsHeader{
+      position: absolute;
+      width: 25%;
+      left: 72.5%;
+      top: 14.25%;
+      transform: translateX(-50%) translateY(-50%);
+      transition:1.5s;
+    }
+  }
+
+
+}
+.TopRight{
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(100% 0, 90% 0, 100% 32%);
+  background-color: #1c1c1c;
+  opacity: 0;
+  transition:0.5s;
+  cursor:pointer;
+  display: none;
+  span{
+    position: absolute;
+    text-transform: uppercase;
+    color: #FFFF81;
+    font-size:18pt;
+    text-align: center;
+    top:5%;
+    left:95%;
+    letter-spacing: 2px;
+  }
+}
+.BottomLeft{
+  background-color: #1c1c1c;
+  clip-path: polygon(0 68%, 0% 100%, 10% 100%);
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  display: none;
+  transition:0.5s;
+  cursor:pointer;
+  span{
+    position: absolute;
+    text-transform: uppercase;
+    color: #FFFF81;
+    font-size:18pt;
+    text-align: center;
+    top:95%;
+    left:2%;
+    letter-spacing: 2px;
+  }
+}
+@media (max-width: 1600px){
+  .Animation{
+    .TopRight{
+      span{
+        left:94%
+      }
+    }
+  }
+}
+@media (max-width: 1280px){
+  .Animation{
+    .BottomLeft{
+      span{
+      font-size: 15pt;
+      }
+    }
+    .TopRight{
+      span{
+        font-size: 15pt;
+      }
+    }
+  }
+}
+@media (max-width: 1194px) and (orientation: landscape){
+  .Animation{
+    .BottomLeft{
+      span{
+        font-size: 14pt;
+      }
+    }
+    .OuterComics{
+    .ComicsHeader{
+      top:21.25%;
+    }
+    }
+    .OuterTypo{
+      .TypoHeader{
+        top:78.5%;
+      }
+    }
+    .TopRight{
+      span{
+        top:3%;
+        font-size: 14pt;
+      }
+    }
+  }
+}
+@media (max-width: 1024px) and (orientation: landscape){
+  .Animation{
+    .BottomLeft{
+      span{
+        font-size: 12pt;
+        left:1%
+      }
+    }
+
+    .TopRight{
+      span{
+        top:2%;
+        font-size: 12pt;
+      }
+    }
+  }
+}
+@media (max-width: 854px) and (orientation: landscape){
+  .Animation{
+    .BottomLeft{
+      span{
+        font-size: 10pt;
+      }
+    }
+    .OuterComics{
+      .ComicsHeader{
+        top:11.25%;
+      }
+    }
+    .OuterTypo{
+      .TypoHeader{
+        top:88.5%;
+      }
+    }
+    .TopRight{
+      span{
+        top:3%;
+        font-size: 10pt;
+      }
+    }
+  }
+}
+@media (max-width: 740px) and (orientation: landscape){
+  .Animation{
+    .BottomLeft{
+      span{
+        font-size: 8pt;
+      }
+    }
+
+    .TopRight{
+      span{
+        font-size: 8pt;
+        left:93%;
+      }
+    }
+  }}
+@media (max-width:834px) and (orientation: portrait){
+  .Animation{
+    margin:0;
+    padding:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1c1c1c;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    .OuterTypo{
+      clip-path: initial !important;
+      height: 50vh;
+      top:50%;
+      left: 50%;
+      transform: translateX(-50%);
+
+      .TypoHeader{
+        left: 28%;
+        top: 78%;
+      }
+    .TypoBg{
+      height: 100%;
+    }
+    }
+    .border{
+      clip-path: initial !important;
+      height: 5px;
+
+    }
+    .OuterComics {
+      clip-path: initial !important;
+      height: 50vh;
+      top:0;
+      left: 50%;
+      transform: translateX(-50%);
+      .ComicsMovie{
+
+      }
+      .ComicsBg{
+        height: 100%;
+      }
+
+
+      .ComicsHeader{
+        top: 22%;
+      }
+    }
+
+  .TopRight{
+    display: none !important;
+  }
+    .BottomLeft{
+      display: none !important;
+    }
+  }}
+@media (max-width:414px) and (orientation: portrait){
+.Animation{
+  .OuterComics{
+    .ComicsHeader{
+      top:27%;
+    }
+  }
+  .OuterTypo{
+    .TypoHeader{
+      top:72%;
+    }
+  }
+}
+}
+@media (max-width:384px) and (orientation: portrait){
+  .Animation{
+    .OuterComics{
+      .ComicsHeader{
+        top:32%;
+      }
+    }
+    .OuterTypo{
+      .TypoHeader{
+        top:68%;
+      }
+    }
+  }
+}

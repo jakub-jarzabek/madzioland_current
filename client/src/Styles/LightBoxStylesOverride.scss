@@ -1,0 +1,78 @@
+.SRLContainer .SRLThumbnailsContainer{
+  display: none;
+}
+.SRLControls{
+  .SRLAutoplayButton {
+    background-color: transparent;
+  }
+  .SRLThumbnailsButton{
+    background-color: transparent;
+  }
+  .SRLDownloadButton{
+    background-color: transparent;
+  }
+  .SRLExpandButton{
+    background-color: transparent;
+  }
+  .SRLZoomOutButton{
+    background-color: transparent;
+  }
+}
+.SRLAutoplayButton, .SRLThumbnailsButton, .SRLDownloadButton, .SRLExpandButton, .SRLZoomOutButton{
+  display: none;
+}
+.SRLElementWrapper .SRLImage{
+  pointer-events: none;
+  height:auto;
+}
+.SRLPrevButton{
+  content: url("../Images/ArrowLeft.png");
+}
+.SRLNextButton{
+  content: url("../Images/ArrowRight.png");
+}
+.SRLCloseButton{
+  content: url("../Images/X.png");
+  margin-right: 30px !important;
+  margin-top:30px !important;
+  width:100%;
+  height:100%;
+}
+.SRLLightbox .SLRStage .SRLNextButton[title="Next"]{
+  height: 70px;
+  width: 70px;
+}
+
+.SRLPrevButton{
+  background-color: transparent !important;
+  height: 70px !important;
+  width: 70px !important;
+  margin-left:10vw !important;
+  pointer-events: auto !important;
+}
+
+.SRLNextButton{
+  background-color: transparent !important;
+  height: 70px !important;
+  width: 70px !important;
+  margin-right:10vw !important;
+  pointer-events: auto !important;
+}
+.SLRStage .css-h9a1eb{
+  left:15%;
+}
+button[title='Next']{
+  pointer-events: none;
+}
+button[title='Previous']{
+  pointer-events: none;
+}
+.SRLContainer{
+.SRLCaptionContainer{
+  padding: 0 0 5% 0;
+  .SRLCaptionText{
+    color:white;
+    font-size: 18pt;
+}
+}
+}

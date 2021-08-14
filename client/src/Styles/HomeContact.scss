@@ -1,0 +1,223 @@
+.HomeContact{
+  max-height: 1080px;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  object-fit: fill;
+  font-family: 'Larke Neue Regular', sans-serif;
+  h1{
+    white-space: nowrap;
+    font-family: 'Larke Neue Bold', sans-serif;
+    display: block;
+    position:absolute;
+    color:#ffff81;
+    font-size: 94px;
+    z-index:7;
+    top:20%;
+    left:50%;
+    transform:translateX(-50%);
+    letter-spacing: 10px;
+  }
+}
+@media (max-width: 1600px){
+  .HomeContact{
+    h1{
+      font-size: 80px;
+      top:15%;
+    }
+    .ContactForm {
+      top:35%;
+    }
+  }
+}
+@media (max-width: 1280px){
+  .HomeContact{
+    h1{
+      font-size: 65px;
+      top:15%;
+    }
+    .ContactForm {
+      top:35%;
+      .ContactWrapper {
+        input, textarea {
+          font-size: 16pt;
+          height: 30pt;
+        }
+      }
+      label {
+        padding: 10px 0;
+        font-size: 16pt;
+      }
+    }
+  }
+}
+  @media (max-width: 1194px) and (orientation: landscape){
+    .HomeContact{
+      h1{
+        font-size: 65px;
+        top:15%;
+      }
+      .ContactForm {
+        top:35%;
+        .ContactWrapper {
+          input, textarea {
+            font-size: 16pt;
+            height: 30pt;
+          }
+        }
+        label {
+          padding: 10px 0;
+          font-size: 16pt;
+        }
+      }
+    }
+}
+@media (max-width: 1194px) and (orientation: portrait){
+  .HomeContact{
+    h1{
+      font-size: 40px;
+      letter-spacing: 1px;
+      top:25%;
+    }
+    .ContactForm {
+      width: 100%;
+      top:35%;
+      .SendBtn{
+        padding: 15px;
+        font-size:14pt;
+        line-height: 14pt;
+        margin-left: 0;
+      }
+      .ContactWrapper {
+        flex-direction: column;
+        .ContactLeft{
+          margin-left: 50%;
+          transform: translateX(-50%);
+          padding-right: 0;
+        }
+        .ContactRight {
+          margin-left: 50%;
+          transform: translateX(-50%);
+          padding-left: 0;
+        }
+        input {
+          font-size: 16pt;
+          height: 30pt;
+
+          }
+        textarea{
+          height: 200px;
+        }
+
+      }
+      label {
+        padding: 10px 0;
+        font-size: 14pt;
+      }
+    }
+  }
+}
+@media (max-width: 992px) and (orientation: landscape){
+  .HomeContact{
+  h1{
+    font-size: 25px;
+    top:18%;
+    letter-spacing: 1px;
+  }
+  .ContactForm {
+    top:35%;
+    .SendBtn{
+      margin-top: 15px;
+      padding: 8px;
+      font-size:8pt;
+      line-height: 8pt;
+      margin-left: 0;
+      letter-spacing: 1px;
+    }
+    .ContactWrapper {
+      input, textarea {
+        font-size: 10pt;
+        height: 20pt;
+      }
+      textarea{
+        margin-bottom: 0;
+      }
+    .ContactLeft{
+      div {
+        padding: 2px;
+      }
+    }
+    }
+    label {
+      padding: 5px 0;
+      font-size: 10pt;
+    }
+  }
+  }
+}
+@media (max-width: 992px) and (orientation: portrait){
+  .HomeContact{
+    h1{
+      font-size: 25px;
+      top:35%;
+      letter-spacing: 1px;
+    }
+    .ContactForm {
+      top:45%;
+      .SendBtn{
+        margin-top: 15px;
+        padding: 8px;
+        font-size:8pt;
+        line-height: 8pt;
+        margin-left: 0;
+        letter-spacing: 1px;
+      }
+      .ContactWrapper {
+        input, textarea {
+          font-size: 10pt;
+          height: 20pt;
+        }
+        textarea{
+          margin-bottom: 0;
+        }
+        .ContactLeft{
+          width: 70%;
+          div {
+            padding: 2px;
+          }
+        }
+        .ContactRight{
+          width:70%;
+          height: 200px;
+        }
+      }
+      label {
+        padding: 5px 0;
+        font-size: 10pt;
+      }
+    }
+  }
+}
+@media (max-width: 667px) and (orientation: portrait){
+  .HomeContact{
+    h1{
+    top:35%;
+    }
+    .ContactForm {
+      top:44%;
+      .ContactWrapper {
+        .ContactRight{
+          height: 140px;
+        }
+        textarea{
+          height: 100px;
+        }
+      }
+      label {
+        padding: 4px 0;
+        font-size: 8pt;
+      }
+    }
+  }
+  }
+

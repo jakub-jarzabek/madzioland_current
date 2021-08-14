@@ -1,0 +1,96 @@
+.NavigationLite{
+  margin-top:1%;
+  width: 100vw;
+  //background-color: #1c1c1c;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  .LangNav{
+    margin-top:20px;
+  a {
+    color:#FFFF81;
+   }
+    a:hover{
+      color:white;
+    }
+  }
+  span, li{
+    font-family: 'larke neue regular', sans-serif;
+    font-size:18pt;
+    color:#FFFF81;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+
+  img{
+  transform: rotate(90deg);
+  margin-right: 30px;
+}
+.GoBack{
+  text-decoration: none;
+  transform: translateY(-25%);
+  margin-top:20px;
+  margin-left: 4%;
+}
+  .GoBack:hover{
+    animation-name:GoBackSwipe;
+    animation-duration: 1s;
+  }
+  @keyframes GoBackSwipe {
+    0% {margin-left: 4%}
+    50% {margin-left: 5%}
+    100% {margin-left: 4%}
+  }
+}
+@media (max-width: 900px) and (orientation: landscape){
+  .NavigationLite{
+    .LangNav{
+      margin-right: 5px;
+    }
+    li{
+      padding:5px 8px
+    }
+    span,li{
+      font-size:10pt;
+      letter-spacing: 2px;
+    }
+    img{
+      width:15%;
+      margin-right: 10px;
+    }
+  }
+}
+@media (max-width: 736px) and (orientation: landscape){
+  .NavigationLite{
+    .GoBack{
+      margin-left:2%;
+    }
+    .LangNav{
+      margin-right: 3px;
+      li{
+        padding-right:4px;
+      }
+    }
+  }
+}
+@media (max-width: 854px) and (orientation: portrait) {
+  .NavigationLite {
+    .LangNav {
+      margin-right: 5px;
+    }
+
+    li {
+      padding: 5px 8px
+    }
+
+    span, li {
+      font-size: 10pt;
+      letter-spacing: 2px;
+    }
+
+    img {
+      width: 15%;
+      margin-right: 10px;
+    }
+  }
+}

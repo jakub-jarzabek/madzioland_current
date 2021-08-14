@@ -1,0 +1,106 @@
+.ProgramList {
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%  );
+  ul{
+    margin-top:15px;
+  }
+  li {
+    margin:auto 10px;
+    position:relative;
+    .ProgramLogo {
+      box-shadow: 0 0 10px black;
+    }
+    .ProgramLogo:hover + .ProgramDesc{
+      //display:block;
+      opacity: 1;
+    }
+    .ProgramDesc{
+      transition:0.5s;
+      display:block;
+      opacity: 0;
+      position:absolute;
+      left:50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+@media(max-width: 1194px) and (orientation: portrait){
+  .ProgramList {
+    width: 100%;
+    ul{
+      margin-left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      width: 80%;
+      flex-wrap: wrap;
+      flex-direction: row;
+      li {
+        .ProgramLogo {
+          height:60px;
+          position: initial;
+          .ProgramDesc{
+            display: none;
+          }
+        }
+    }
+
+    }
+  }
+}
+@media (max-width: 854px) and (orientation: portrait){
+  .ProgramList {
+      margin-top:0;
+    ul{
+      width: 90%;
+      li {
+        padding: 0;
+        margin:2%;
+        width: 20%;
+        .ProgramLogo {
+          height:auto;
+          width: 80%;
+          position: initial;
+          .ProgramDesc{
+            display: none;
+          }
+        }
+      }
+
+    }
+  }
+
+}
+@media (max-width: 992px) and (orientation: landscape){
+  .ProgramList {
+    width: 100%;
+    ul{
+      padding-left: 0;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      width: 60%;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      li {
+        padding: 0;
+        .ProgramLogo {
+          height:30px;
+          position: initial;
+          .ProgramDesc{
+            display: none;
+          }
+        }
+      }
+
+    }
+  }
+}
+@media (max-width: 763px) and (orientation: landscape){
+  .ProgramList {
+    ul{
+      width: 70%;
+    }
+  }
+}

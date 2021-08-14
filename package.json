@@ -1,0 +1,17 @@
+{
+  "name": "new-folder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "backend": "cd server && npm run dev",
+    "frontend": "npm run front --prefix client",
+    "dev": "concurrently \"npm run backend\" \"npm run start --prefix client\""
+  },
+  "dependencies": {
+    "concurrently": "^6.2.0"
+  },
+  "author": "Jakub Jarząbek",
+  "license": "ISC"
+}

@@ -1,0 +1,77 @@
+
+.PhotographyHeaderWrapper{
+  margin-left: 10%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .HeaderImg{
+    max-width: 100%;
+}
+  .PhotographyNav{
+    margin-top:30px;
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    max-width:1590px;
+    .span-active{
+      color: #FFFF81;
+    }
+    span{
+      cursor:pointer;
+      font-size: 18pt;
+      color: white;
+      font-family: 'larke neue regular', sans-serif;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+    }
+    span:hover{
+      color:#FFFF81;
+    }
+  }
+}
+@media (max-width: 900px) and (orientation: landscape){
+  .PhotographyHeaderWrapper{
+    width: 60%;
+    margin-left: 0;
+    position:absolute;
+    left:50%;
+    top:10%;
+    transform: translateX(-50%);
+
+  .PhotographyNav{
+    span{
+      font-size:10pt;
+      letter-spacing: 2px;
+    }
+  }
+  }
+}
+@media(max-width: 1024px) and (orientation: portrait){
+  .PhotographyHeaderWrapper{
+    width: 90%;
+    margin-left: 0;
+    position:absolute;
+    left:50%;
+    top:10%;
+    transform: translateX(-50%);
+
+    .PhotographyNav{
+      span{
+        font-size:10pt;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
+@media (max-width: 414px) and (orientation: portrait){
+  .PhotographyHeaderWrapper{
+    .PhotographyNav{
+      text-align: center;
+    flex-direction: column;
+      span{
+        margin-top: 8px;
+      }
+    }
+  }
+}

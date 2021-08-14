@@ -1,0 +1,19 @@
+.App{
+  margin: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+ul{
+  letter-spacing: 1px;
+  display: flex;
+  margin-top:50px
+}
+.fade-router-enter {
+  opacity: 0;
+  z-index: 8;
+}
+
+.fade-router-enter.fade-router-enter-active {
+  opacity: 1;
+  transition: opacity 2000ms ease-in;
+}

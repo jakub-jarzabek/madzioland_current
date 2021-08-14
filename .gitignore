@@ -1,0 +1,7 @@
+node_modules
+/server/node_modules
+/client/node_modules
+/client/src/Images
+/client/src/Video
+/client/src/LanguageFiles
+/client/src/Fonts

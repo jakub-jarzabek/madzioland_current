@@ -1,0 +1,96 @@
+.ContactForm {
+  display: flex;
+  z-index: 5;
+  top: 40%;
+  left: 50%;
+  width: 70%;
+  transform: translateX(-50%);
+  position: absolute;
+  flex-direction: column;
+  .SendBtn{
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 50px;
+    padding: 18px;
+    align-self: center;
+    font-size:18pt;
+    background-color: #FFFF81;
+    color:black;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    border:none;
+    line-height: 18pt;
+    cursor: pointer;
+  }
+  .SendBtn:hover{
+    box-shadow: 0 0 5px #FFFF81;
+  }
+  .ContactWrapper {
+    display: flex;
+    justify-content: space-between;
+    input, textarea {
+      background-color: #1c1c1c;
+      color: white;
+      font-family: 'larke neue thin', sans-serif;
+      width: 100%;
+      font-size: 18pt;
+      border: none;
+      height: 40pt;
+      caret-color: #FFFF81;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      box-shadow: 0 0 3px #FFFF81;
+      //border: 1px solid #FFFF81;
+    }
+
+    label {
+      padding: 15px 0;
+      font-size: 18pt;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: block;
+      color: #FFFF81;
+    }
+
+    .ContactLeft {
+      padding-right: 3%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 50%;
+      max-height: 433px;
+
+      div {
+        padding: 15px 0;
+      }
+
+      div:first-child {
+        padding-top: 0;
+      }
+
+    }
+
+    .ContactRight {
+      display: flex;
+      flex-direction: column;
+      max-height: 433px;
+      padding-left: 3%;
+
+      textarea {
+        flex-grow: 1;
+        margin-bottom: 15px;
+        resize: none;
+        width: 100%;
+        max-height: 100%;
+        max-width: 100%;
+        padding-left: 0;
+        padding-top: 0;
+      }
+
+      width: 50%;
+    }
+  }
+}
