@@ -9,8 +9,9 @@ import TypoHeader from '../Images/TypoHeader.png'
 import ComicsHeader from '../Images/ComicsHeader.png'
 import TypoHeader_ENG from '../Images/TypoHeader_ENG.png'
 import ComicsHeader_ENG from '../Images/ComicsHeader_ENG.png'
+import NavigationLite from '../Components/NavigationLite'
 const Animation = (props) => {
-
+    const [navOpacity,setNavOpacity] = useState('1')
     const [comicsHeader,setComicsHeader] = useState(ComicsHeader);
     const [typoHeader,setTypoHeader] = useState(TypoHeader);
     useEffect(()=>{
@@ -81,6 +82,7 @@ const Animation = (props) => {
     }
 
     const handleTypoOnClick= () =>{
+        document.querySelector('#AnimationDiv .NavigationLite').style.opacity=0    
             setDisableComics(true)
             setZIndex({
                 comics:'0',
@@ -107,6 +109,7 @@ const Animation = (props) => {
 }
 
     const handleTopRightOnClick= ()=>{
+        document.querySelector('#AnimationDiv .NavigationLite').style.opacity=1
         if(disableComics===false){
             setTypoContentOpacity({
                 header:'1',
@@ -131,6 +134,7 @@ const Animation = (props) => {
 }
 
     const handleComicsOnClick= () =>{
+        document.querySelector('#AnimationDiv .NavigationLite').style.opacity=0
         setDisableTypo(true)
         setZIndex({
             comics:'1',
@@ -161,6 +165,7 @@ const Animation = (props) => {
     }
 
     const handleBottomLeftOnClick= ()=>{
+        document.querySelector('#AnimationDiv .NavigationLite').style.opacity=1
         if (disableTypo===false){
             setComicsMouseOverCheck(false);
             setBottomLeftDisplay('none')
@@ -187,6 +192,7 @@ const Animation = (props) => {
 
     return (
         <div className='Animation' id='AnimationDiv'>
+           <NavigationLite textContext={props.textContext} engOnClick={props.engOnClick} plOnClick={props.plOnClick} id='AnimationNav' style={{opacity:navOpacity}}/>
             <p className='Legal'>Copyright &copy; <a href="https://www.linkedin.com/in/magdalena-pierzchala/" className='NameLink'>Magdalena Pierzchała</a> | Website created By <a href="https://www.linkedin.com/in/jakub-jarzabek/" className='NameLink'>Jakub Jarząbek</a></p>
             <div className='OuterTypo' style={{transition:'1.5s',clipPath:clipPath.typo, zIndex:zIndex.typo} } id='OuterTypo' onClick={handleTypoOnClick} onMouseEnter={handleTypoOnMouseOver}>
                 <img src={TypoBg} alt="" className='TypoBg'/>

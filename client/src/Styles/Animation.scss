@@ -9,6 +9,11 @@
   background-color: #1c1c1c;
   box-sizing: border-box;
   position: relative;
+  .NavigationLite{
+    position:absolute;
+    z-index: 1000;
+    transition: 1s;
+  }
   .Legal{
     font-size: 8px;
     position: absolute;
@@ -130,6 +135,7 @@
 
 }
 .TopRight{
+  z-index: 10010;
   height: 100%;
   width: 100%;
   clip-path: polygon(100% 0, 90% 0, 100% 32%);
@@ -142,11 +148,12 @@
     position: absolute;
     text-transform: uppercase;
     color: #FFFF81;
-    font-size:18pt;
+    font-size:18px;
     text-align: center;
-    top:5%;
-    left:95%;
-    letter-spacing: 2px;
+    top:3.5%;
+    left:96%;
+    letter-spacing: 3px;
+    transform:translateX(-50%) translateY(-50%)
   }
 }
 .BottomLeft{
@@ -162,11 +169,12 @@
     position: absolute;
     text-transform: uppercase;
     color: #FFFF81;
-    font-size:18pt;
+    font-size:18px;
     text-align: center;
-    top:95%;
-    left:2%;
-    letter-spacing: 2px;
+    top:96.5%;
+    left:4%;
+    transform:translateX(-50%) translateY(-50%);
+    letter-spacing: 3px;
   }
 }
 @media (max-width: 1600px){

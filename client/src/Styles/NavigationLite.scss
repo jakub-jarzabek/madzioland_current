@@ -16,15 +16,16 @@
   }
   span, li{
     font-family: 'larke neue regular', sans-serif;
-    font-size:18pt;
+    font-size:18px;
     color:#FFFF81;
     letter-spacing: 5px;
     text-transform: uppercase;
   }
 
   img{
+    height: 13px;
   transform: rotate(90deg);
-  margin-right: 30px;
+  margin-right: 20px;
 }
 .GoBack{
   text-decoration: none;
@@ -38,7 +39,7 @@
   }
   @keyframes GoBackSwipe {
     0% {margin-left: 4%}
-    50% {margin-left: 5%}
+    50% {margin-left:4.5%}
     100% {margin-left: 4%}
   }
 }

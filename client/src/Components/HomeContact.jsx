@@ -11,7 +11,7 @@ const HomeContact = (props) => {
         <div className="HomeContact">
                 <CSSTransition
                     in={props.visible}
-                    timeout={2000}
+                    timeout={1000}
                     classNames="display"
                     unmountOnExit
                 >

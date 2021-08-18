@@ -210,6 +210,7 @@ const Photography = (props) => {
     const [tab,setTab]=useState('nature')
     const [imageArray, setImageArray]=useState(natureImagesObjectsArray)
     const [currentImage, setCurrentImage] = useState(imageArray[0].src);
+    const [width, setWidth] = useState('80%');
     // Functions
     const removeAllActiveClass = ()=>{
         for (let i =0;i<imageArray.length-1;i++){
@@ -231,6 +232,7 @@ const Photography = (props) => {
                 setImageArray(natureImagesObjectsArray)
                 setCurrentImage(natureImagesObjectsArray[0].src)
                 setCounter(0);
+                setWidth('80%')
                 break
             }
             case 'human' :{
@@ -238,6 +240,7 @@ const Photography = (props) => {
                 setImageArray(humanImagesObjectsArray)
                 setCurrentImage(humanImagesObjectsArray[0].src)
                 setCounter(0);
+                setWidth('auto')
                 break
             }
             case 'architecture' :{
@@ -245,6 +248,7 @@ const Photography = (props) => {
                 setImageArray(architectureImagesObjectsArray)
                 setCurrentImage(architectureImagesObjectsArray[0].src)
                 setCounter(0);
+                setWidth('62%')
                 break
             }
             case 'abstract' :{
@@ -252,6 +256,7 @@ const Photography = (props) => {
                 setImageArray(abstractImagesObjectsArray)
                 setCurrentImage(abstractImagesObjectsArray[0].src)
                 setCounter(0);
+                setWidth('50%')
                 break
             }
             default : {
@@ -273,11 +278,27 @@ const Photography = (props) => {
         // {
         //     setCounter(0)
         // }
-        document.getElementById('ImagesContainer').scrollBy({left:document.getElementById('ImagesContainer').scrollLeftMax/2,behavior:'smooth'})  
+        let scroll
+        if(document.querySelector(`[imagecounter="${counter+1}"]` !== 'undefined')){
+             scroll = document.querySelector(`[imagecounter="${counter+1}"]`).offsetWidth
+        }
+        else{
+            scroll = document.querySelector(`[imagecounter="${counter}"]`).offsetWidth
+        }
+
+
+        document.getElementById('ImagesContainer').scrollBy({left:scroll,behavior:'smooth'})  
         //.scrollLeft+=document.getElementById('ImagesContainer').scrollLeftMax/2;
     }
     const decrementOnClick = ()=>{
-        document.getElementById('ImagesContainer').scrollBy({left:-document.getElementById('ImagesContainer').scrollLeftMax/2,behavior:'smooth'})  
+        let scroll
+        if(document.querySelector(`[imagecounter="${counter-1}"]` !== 'undefined')){
+             scroll = document.querySelector(`[imagecounter="${counter-1}"]`).offsetWidth
+        }
+        else{
+            scroll = document.querySelector(`[imagecounter="${counter}"]`).offsetWidth
+        }
+        document.getElementById('ImagesContainer').scrollBy({left:-scroll,behavior:'smooth'})  
         //.scrollLeft-=document.getElementById('ImagesContainer').scrollLeftMax/2;
         // document.querySelector(`[imagecounter="${counter}"]`).classList.remove('NatureImg-active')
         // if(counter>0) {
@@ -336,7 +357,7 @@ const Photography = (props) => {
             <div className='ImageDisplay'>
                 <img src={currentImage} alt="" id='MainImage'/>
             </div>
-            <div className='ImagesContainerWrapper'>
+            <div className='ImagesContainerWrapper' style={{width:width}}>
                 <button onClick={decrementOnClick} className='PrevImgBtn'>
                     <img src={ArrowLeft} alt=""/>
                 </button>

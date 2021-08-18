@@ -24,6 +24,9 @@
 .SRLElementWrapper .SRLImage{
   pointer-events: none;
   height:auto;
+  max-width: 60%;
+  max-height: 80%;
+  top:4%;
 }
 .SRLPrevButton{
   content: url("../Images/ArrowLeft.png");
@@ -45,16 +48,16 @@
 
 .SRLPrevButton{
   background-color: transparent !important;
-  height: 70px !important;
-  width: 70px !important;
+  height: 60px !important;
+  width: 60px !important;
   margin-left:10vw !important;
   pointer-events: auto !important;
 }
 
 .SRLNextButton{
   background-color: transparent !important;
-  height: 70px !important;
-  width: 70px !important;
+  height: 60px !important;
+  width: 60px !important;
   margin-right:10vw !important;
   pointer-events: auto !important;
 }
@@ -69,10 +72,13 @@ button[title='Previous']{
 }
 .SRLContainer{
 .SRLCaptionContainer{
-  padding: 0 0 5% 0;
+  bottom: 120%;
+  // padding: 0 0 7% 0;
   .SRLCaptionText{
     color:white;
-    font-size: 18pt;
+    font-size: 18px;
+    font-family: 'Larke Neue Regular' , sans-serif;
+    // margin-bottom: 150px;
 }
 }
 }

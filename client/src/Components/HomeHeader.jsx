@@ -12,6 +12,9 @@ export function HomeHeader(props) {
     const [contactVisible,SetContactVisible]= useState(false)
 
     const handleAboutOnClick = ()=> {
+        if(aboutVisible===false && contactVisible === false){
+            SetAboutVisible(true)
+        }
         let element = document.getElementById('contactBtn')
         if(typeof element !== 'undefined' && element !== null) {
             SetContactVisible(false);
@@ -19,10 +22,13 @@ export function HomeHeader(props) {
             setTimeout(() => {
                 SetAboutVisible(true)
                 element.style.pointerEvents = 'auto';
-            }, 1600)
+            }, 1000)
         }
     }
     const handleContactOnClick = ()=>{
+        if(aboutVisible===false && contactVisible === false){
+            SetContactVisible(true)
+        }
         let element = document.getElementById('aboutBtn')
         if(typeof element !== 'undefined' && element !== null) {
         SetAboutVisible(false);
@@ -30,7 +36,7 @@ export function HomeHeader(props) {
         setTimeout(()=>{
             SetContactVisible(true)
             element.style.pointerEvents='auto';
-        },1600)}
+        },1000)}
         }
 
     const handleLogoOnClick = ()=>{
@@ -55,7 +61,7 @@ export function HomeHeader(props) {
             />
         <CSSTransition
             in={aboutVisible || contactVisible}
-            timeout={2000}
+            timeout={1000}
             classNames="BackgroundDarkening"
             unmountOnExit
         >

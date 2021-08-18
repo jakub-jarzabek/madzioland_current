@@ -12,7 +12,7 @@ const HomeAbout = (props) => {
                         <div className="AboutInfo">
                             <CSSTransition
                                 in={props.visible}
-                                timeout={5000}
+                                timeout={1000}
                                 classNames="display"
                                 unmountOnExit
                             >
@@ -20,7 +20,7 @@ const HomeAbout = (props) => {
                             </CSSTransition>
                                 <CSSTransition
                                     in={props.visible}
-                                    timeout={2000}
+                                    timeout={1000}
                                     classNames="display"
                                     unmountOnExit
                                 >
@@ -29,7 +29,7 @@ const HomeAbout = (props) => {
                                 </CSSTransition>
                                     <CSSTransition
                                         in={props.visible}
-                                        timeout={2000}
+                                        timeout={1000}
                                         classNames="display"
                                         unmountOnExit
                                     >
@@ -37,7 +37,7 @@ const HomeAbout = (props) => {
                                     </CSSTransition>
                             <CSSTransition
                                 in={props.visible}
-                                timeout={2000}
+                                timeout={1000}
                                 classNames="display"
                                 unmountOnExit
                             >
