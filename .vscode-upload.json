@@ -1,0 +1,9 @@
+{
+    "host": "65.21.48.138",
+    "port": 22,
+    "username": "root",
+    "password": "K@cper24698!",
+    "remotePath": "dupa",
+    "disable": false,
+    "exclude": ["node_modules"]
+}

@@ -100,11 +100,11 @@
   }
 }
 @media (max-width: 1195px) and (orientation: landscape){
-  .GraphicDesignGalleryWrapper{
-    // div{
-    //   max-height: 52vh;
-    // }
-  }
+//   .GraphicDesignGalleryWrapper{
+//     div{
+//      justify-content: space-around;
+//     }
+//   }
 }
 @media (max-width: 1025px) and (orientation: landscape){
   .GraphicDesignGalleryWrapper{
@@ -131,13 +131,14 @@
 @media (max-width: 1024px) and (orientation: portrait){
   .GraphicDesignGalleryWrapper{
     div{
-      // justify-content: space-between;
-      max-height: 80vh;
+      justify-content: space-between;
+      max-height: 75vh;
       flex-direction: row;
       flex-wrap: wrap;
       width: 100%;
       div{
         width:calc(33.3% - 2%);
+        padding:1% 0%;
         a{
           img
           {

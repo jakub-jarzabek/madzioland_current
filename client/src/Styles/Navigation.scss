@@ -179,7 +179,11 @@ li{
     }
   }
 }
-
+@media (max-height: 568px) and (orientation: portrait){
+  .Navigation {
+    font-size: 14px;
+  }
+}
 
 //Landscape
 @media(max-width: 1024px) and(orientation:landscape){
@@ -280,3 +284,6 @@ li{
         }
       }
     }}
+@media (max-height: 568px) and (orientation: portrait){
+  
+}

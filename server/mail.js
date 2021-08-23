@@ -1,48 +1,41 @@
 const mailer = require('nodemailer');
+require('dotenv').config()
 
 
-
-
-
+let transporter = mailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 587,
+    tls: {
+        rejectUnauthorized: false
+    },
+    auth: {
+      user: process.env.USER_MAIL,
+      pass: process.env.PASSWD,
+    },
+  });
 
 
 const getEmailData = (subject,name,email,content)=>{
     let data = null
     data = {
-        from: email,
-        to:"kubitssu@gmail.com",
-        subject,
-        text: `${name} napisał: ${content}`
+        from: "mdziolandsmtp@gmail.com",
+        to: "kubitssu@gmail.com",
+        subject: subject,
+        text:"czesc",
+        html: `<h1>${name} z emaila ${email} napisał: </h1>
+        <br>
+        <p>${content}</p>
+        `
      }
      return data;
 }
 
 const sendEmail = async (subject,name,email,content) =>{
-
-    let testAccount = await mailer.createTestAccount();
-
-    const smtpTransport = mailer.createTransport({
-        host: "smtp.ethereal.email",
-        port: 587,
-        secure: false,
-        auth: {
-            user: testAccount.user,
-            pass: testAccount.pass,
-        },
-    });
-
-    smtpTransport.verify(function (error, success){
-        if (error){
-            console.log(error)
-        }else {
-            console.log("Server ready")
-        }
-    })
-
+ 
 
     const mail = await getEmailData(subject,name,email,content)
 
-    smtpTransport.sendMail(mail,function(error,response) {
+    transporter.sendMail(mail,function(error,response) {
         if(error){
             console.log(error);
         }
@@ -50,7 +43,6 @@ const sendEmail = async (subject,name,email,content) =>{
 
         console.log (`email sent from: ${mail.from} to: ${mail.to}`);
         }
-         smtpTransport.close();
     })
 
 

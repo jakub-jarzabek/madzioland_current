@@ -10,7 +10,8 @@ const NavigationLite = (props) => {
         <div className="NavigationLite">
             <NavLink to='/' className="GoBack">
                 <img src={Triangle}  alt=""/>
-                <span>{props.textContext.NavigationLite.back}</span>
+                <span className="firstSpan">{props.textContext.NavigationLite.back}</span>
+                <span className="secondSpan">{props.textContext.NavigationLite.back2}</span>
             </NavLink>
 
             <ul className="LangNav">

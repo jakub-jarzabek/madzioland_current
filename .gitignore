@@ -5,3 +5,4 @@ node_modules
 /client/src/Video
 /client/src/LanguageFiles
 /client/src/Fonts
+/client/build

@@ -48,29 +48,51 @@
     .LangNav{
       margin-right: 5px;
     }
+    .GoBack{
+      margin-left:2%;
+    }
     li{
       padding:5px 8px
+    }
+    span:nth-child(3){
+      // display: block;
+      padding-left:1px;
     }
     span,li{
       font-size:10pt;
       letter-spacing: 2px;
     }
     img{
-      width:15%;
+      width:15px;
       margin-right: 10px;
     }
+    .firstSpan{
+      display: none;
+    }
   }
+  
 }
 @media (max-width: 736px) and (orientation: landscape){
   .NavigationLite{
     .GoBack{
-      margin-left:2%;
+      margin-left:0%;
     }
     .LangNav{
       margin-right: 3px;
       li{
         padding-right:4px;
       }
+     
+    }
+
+    span, li {
+      font-size: 8pt;
+      letter-spacing: 1px;
+    }
+    img{
+      width:10px;
+      height: auto;
+      margin-right: 10px;
     }
   }
 }
@@ -90,9 +112,12 @@
     }
 
     img {
-      width: 15%;
+      width: 15px;
       margin-right: 10px;
     }
+  }
+  .firstSpan{
+    display: none;
   }
 }
 @media (max-height:600px) and (orientation:portrait){

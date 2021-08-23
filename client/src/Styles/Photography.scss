@@ -413,8 +413,29 @@
 
 }}
 
+@media (max-height:812px) and (orientation:portrait){
+  .Photography{
+    .nextPageBtnPhoto{
+      bottom:1%;
+    }
+    .nextPageBtnPhoto span{
+      letter-spacing: 2px;
+      font-size: 10pt;
+    }
+    .LangNav span {
+      line-height: 0;;
+    }
+    .PhotographyHeader .NavigationLite a{
+      margin-top: 10px;
+    }
+  }
+}
+
 @media(max-height:736px) and (orientation:portrait){
   .Photography {
+    .PhotographyHeader{
+      margin-top: 10px;
+    }
     .ImageDisplay {
       margin-top: 160px;
       max-width: 80%;
@@ -452,6 +473,7 @@
 @media(max-height:668px) and (orientation:portrait)
 {
   .Photography {
+   
     .ImageDisplay {
       margin-top: 150px;
       max-width: 80%;

@@ -261,3 +261,22 @@
   }
   }
 
+@media (max-height: 568px) and (orientation: portrait){
+  .HomeContact{
+    .ContactForm {
+      label{
+        padding: 2px 0;
+        font-size:6pt;
+      }
+      .ContactWrapper{
+        .ContactRight{
+          height: 100px;
+        }
+      textarea{
+        height: 60px;
+        font-size: 6pt;
+      }
+    }
+    }
+  }
+}

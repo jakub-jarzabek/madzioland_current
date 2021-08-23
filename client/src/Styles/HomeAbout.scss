@@ -115,13 +115,15 @@
     }
   }
 }
-@media (max-height:640px) and (orientation: portrait){
+@media (max-height:824px) and (orientation: portrait){
   .AboutInfo{
+    top:35%;
     h1{
       font-size:14pt;
     }
     p{
       font-size:8pt;
+      line-height: 12pt;
     }
     h2{
       font-size: 8pt;
@@ -129,7 +131,26 @@
   }
 }
 
-
+@media (max-width: 1024px) and (orientation: landscape){
+  .AboutInfo {
+    width: 90%;
+    h1 {
+      margin-top: 0;
+      font-size: 22pt;
+      margin-bottom: 10px;
+    }
+    p{
+      font-size: 14pt;
+      margin-bottom: 15px;
+      line-height: 18pt;
+    }
+    h2{
+      font-size:11pt ;
+      white-space: nowrap;
+      margin-top:0;
+    }
+  }
+}
 @media (max-width: 992px) and (orientation: landscape){
   .AboutInfo {
     width: 90%;
@@ -141,6 +162,7 @@
     p{
       font-size: 12pt;
       margin-bottom: 15px;
+      line-height: 14pt;
     }
     h2{
       font-size:11pt ;
@@ -165,3 +187,8 @@
   }
 }
 
+@media (max-height:640px) and (orientation: portrait){
+.AboutInfo{
+  top:40%
+}
+}

@@ -38,6 +38,14 @@ import Triangle from "../Images/Tiangle.png";
 import {Link} from "react-scroll";
 import {HomeHeader} from "./HomeHeader";
 const Photography = (props) => {
+const isBiggerThanFHD = () => {
+    if(window.innerWidth==='1920'){
+        return true
+    }
+    else{
+        return false
+    }
+}
     const handleOnClick = () =>{
         const height = document.getElementById("GraphicDesignDiv").offsetHeight
         document.getElementById("PortfolioWrapper").scrollBy({top:height,behavior:'smooth'})    
@@ -211,6 +219,7 @@ const Photography = (props) => {
     const [imageArray, setImageArray]=useState(natureImagesObjectsArray)
     const [currentImage, setCurrentImage] = useState(imageArray[0].src);
     const [width, setWidth] = useState('80%');
+    const [windowWidth, setWindowWidht]= useState()
     // Functions
     const removeAllActiveClass = ()=>{
         for (let i =0;i<imageArray.length-1;i++){
@@ -232,7 +241,10 @@ const Photography = (props) => {
                 setImageArray(natureImagesObjectsArray)
                 setCurrentImage(natureImagesObjectsArray[0].src)
                 setCounter(0);
-                setWidth('80%')
+                if(window.innerWidth>="1920"){
+                    setWidth('80%')
+                }
+                
                 break
             }
             case 'human' :{
@@ -248,7 +260,9 @@ const Photography = (props) => {
                 setImageArray(architectureImagesObjectsArray)
                 setCurrentImage(architectureImagesObjectsArray[0].src)
                 setCounter(0);
+                if(window.innerWidth>="1920"){
                 setWidth('62%')
+                }
                 break
             }
             case 'abstract' :{
@@ -256,7 +270,9 @@ const Photography = (props) => {
                 setImageArray(abstractImagesObjectsArray)
                 setCurrentImage(abstractImagesObjectsArray[0].src)
                 setCounter(0);
+                if(window.innerWidth>="1920"){
                 setWidth('50%')
+                }
                 break
             }
             default : {
@@ -357,7 +373,7 @@ const Photography = (props) => {
             <div className='ImageDisplay'>
                 <img src={currentImage} alt="" id='MainImage'/>
             </div>
-            <div className='ImagesContainerWrapper' style={{width:width}}>
+            <div className='ImagesContainerWrapper' style={{width:isBiggerThanFHD() ? width : null}}>
                 <button onClick={decrementOnClick} className='PrevImgBtn'>
                     <img src={ArrowLeft} alt=""/>
                 </button>

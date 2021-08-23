@@ -101,3 +101,11 @@
     }
   }
 } 
+@media (max-height:812px) and (orientation: portrait){
+  .HomeHeader{
+    .Legal{
+      font-size: 6px;
+      margin-bottom: 0px;
+    }
+  }
+}
