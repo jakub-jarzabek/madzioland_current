@@ -32,6 +32,19 @@ const ContactForm = (props) => {
             content:messageContent
         }
          axios.post("/api/send",dataToSubmit)
+            .then(res=>
+                {
+                    if(res.data==='done'){
+                        setName('');
+                        setMail('');
+                        setTopic('');
+                        setMessageContent('');
+                        alert("Message sent successfully")
+                    }
+                    else{
+                        alert("Message sending failed")
+                    }
+                })
 
     }
     return (

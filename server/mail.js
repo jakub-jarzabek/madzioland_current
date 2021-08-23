@@ -18,12 +18,18 @@ let transporter = mailer.createTransport({
 const getEmailData = (subject,name,email,content)=>{
     let data = null
     data = {
-        from: "mdziolandsmtp@gmail.com",
-        to: "kubitssu@gmail.com",
+        from: process.env.USER_MAIL,
+        to: process.env.USER_TO,
         subject: subject,
         text:"czesc",
-        html: `<h1>${name} z emaila ${email} napisał: </h1>
-        <br>
+        html: `
+        <h4>Imię i Nazwisko: </h4>
+        <span>${name}<span/>
+        <h4>Email: </h4>
+        <span>${email}</span>
+        <h4>Temat:</h4>
+        <span>${subject}<span>
+        <h4>Treść:</h4>
         <p>${content}</p>
         `
      }

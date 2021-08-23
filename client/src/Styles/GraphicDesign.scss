@@ -105,5 +105,16 @@
     }
   }
 }
+@media(min-width:1921px){
+  .nextPageBtn{
+    bottom:1%;
+    padding: 10px;
+}
+@keyframes nextPageBtnMove {
+  0% {bottom: 1%;}
+  50%{bottom: 1.5%;}
+  100% {bottom: 1%;}
+}
+}
 
 

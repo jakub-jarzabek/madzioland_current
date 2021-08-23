@@ -31,11 +31,7 @@ app.use(function (req, res, next) {
 app.post("/api/send", async (req,res)=>{
    console.log(req.body)
     await sendEmail(req.body.topic,req.body.name,req.body.email,req.body.content);
-    res.send(req.body.topic)
-})
-
-app.get('/', (req,res)=>{
-    res.send('jachu lize jaja')
+    res.send("done")
 })
 
 app.listen(5000 ,()=>{

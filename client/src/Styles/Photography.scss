@@ -498,3 +498,18 @@
     }
 
 }
+
+@media(min-width:1921px){
+  .Photography{
+  .nextPageBtnPhoto{
+    font-size: 18px;
+    bottom:1%;
+    padding: 10px;
+}
+@keyframes nextPageBtnMovePhoto {
+  0% {bottom: 1%;}
+  50%{bottom: 1.5%;}
+  100% {bottom: 1%;}
+}
+}
+}
