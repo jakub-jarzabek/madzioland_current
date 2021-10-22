@@ -10,9 +10,9 @@
   position: relative;
 }
 .GalleryWrapper{
-  width:80%;
+  width:74%;
   position: absolute;
-  top:15%;
+  top:13%;
   left:50%;
   transform: translateX(-50%);
 }
@@ -105,16 +105,16 @@
     }
   }
 }
-@media(min-width:1921px){
-  .nextPageBtn{
-    bottom:1%;
-    padding: 10px;
-}
-@keyframes nextPageBtnMove {
-  0% {bottom: 1%;}
-  50%{bottom: 1.5%;}
-  100% {bottom: 1%;}
-}
-}
+// @media(min-width:1921px){
+//   .nextPageBtn{
+//     bottom:1%;
+//     padding: 10px;
+// }
+// @keyframes nextPageBtnMove {
+//   0% {bottom: 1%;}
+//   50%{bottom: 1.5%;}
+//   100% {bottom: 1%;}
+// }
+// }
 
 

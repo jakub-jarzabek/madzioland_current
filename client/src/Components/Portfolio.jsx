@@ -19,7 +19,7 @@ import {HomeHeader} from "./HomeHeader";
               <DigitalArt id='DigitalArt' textContext={props.textContext} engOnClick={props.engOnClick} plOnClick={props.plOnClick}/>
             </SimpleReactLightbox>
             <Photography id='Photography' textContext={props.textContext} engOnClick={props.engOnClick} plOnClick={props.plOnClick}/>
-            <Animation id='Animation' textContext={props.textContext}/>
+            <Animation id='Animation' textContext={props.textContext} engOnClick={props.engOnClick} plOnClick={props.plOnClick}/>
            </div>
         </div>
     );

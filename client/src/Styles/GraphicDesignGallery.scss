@@ -1,6 +1,6 @@
 
 .GraphicDesignGalleryWrapper{
-  margin-top:2%;
+  margin-top:1%;
   div{
     width:100%;
     display: flex;
@@ -8,7 +8,7 @@
     //justify-content: space-between;
     flex-grow:0;
     overflow-y:scroll;
-    max-height: 32vw;
+    max-height: 30vw;
     div{
       overflow: initial;
       padding: 1.25%;
